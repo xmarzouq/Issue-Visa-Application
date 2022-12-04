@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VisaController">
+   <children>
+      <TabPane fx:id="tapId" prefHeight="423.0" prefWidth="610.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Form">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" layoutX="6.0" prefHeight="165.0" prefWidth="601.0" text="Issue Visit Visa Details">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="101.0" prefWidth="231.0">
+                                 <children>
+                                    <Label layoutX="23.0" layoutY="24.0" text="Name" />
+                                    <Label layoutX="23.0" layoutY="64.0" text="Paasport Number" />
+                                    <TextField fx:id="nameId" layoutX="133.0" layoutY="19.0" prefHeight="27.0" prefWidth="445.0" />
+                                    <TextField fx:id="passportId" layoutX="133.0" layoutY="59.0" prefHeight="27.0" prefWidth="445.0" />
+                                    <Label fx:id="dataMessageId" layoutX="30.0" layoutY="91.0" prefHeight="59.0" prefWidth="358.0" textAlignment="RIGHT" textFill="RED">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="saveButtonId" layoutX="504.0" layoutY="107.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Save Data" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane fx:id="titlePaneId" animated="false" layoutX="6.0" layoutY="165.0" prefHeight="226.0" prefWidth="601.0" text="Payment">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="584.0">
+                                 <children>
+                                    <Label layoutX="27.0" layoutY="16.0" text="Card Number: ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="creditCardId" layoutX="136.0" layoutY="12.0" prefHeight="27.0" prefWidth="439.0" />
+                                    <Button fx:id="payButton" layoutX="536.0" layoutY="42.0" mnemonicParsing="false" onAction="#handlePayButton" text="Pay" />
+                                    <Button layoutX="136.0" layoutY="105.0" mnemonicParsing="false" onAction="#handlePaid" prefHeight="27.0" prefWidth="98.0" text="Yes" />
+                                    <Button layoutX="479.0" layoutY="105.0" mnemonicParsing="false" onAction="#handleNotPaid" prefHeight="27.0" prefWidth="96.0" text="No" />
+                                    <Label layoutX="338.0" layoutY="110.0" text="Paid? ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="bankMessageId" layoutX="262.0" layoutY="50.0" prefHeight="55.0" prefWidth="274.0" textAlignment="CENTER" textFill="RED">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="viewData" layoutX="278.0" layoutY="141.0" mnemonicParsing="false" onAction="#handleViewData" prefHeight="43.0" prefWidth="160.0" text="View Visa Information">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="savedDataTap" text="Saved Data">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="backButton" layoutX="278.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleGetBack" text="Get Back" />
+                        <Text fx:id="dataId" layoutX="221.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>
